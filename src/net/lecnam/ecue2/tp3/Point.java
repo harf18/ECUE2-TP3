@@ -30,6 +30,6 @@ public class Point {
     @Override
     public String toString()
     {
-        return "Point coordonées : (" + x + ", " + y + ")";
+        return "(" + x + ", " + y + ")";
     }
 }
