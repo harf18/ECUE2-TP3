@@ -19,7 +19,8 @@ public class Exec  {
         System.out.println("Coordonnée du point p3 (avec la translation) : " + p3.toString());
         System.out.print("Distance entre p1 et p2 : " + p1.retourneDistance(p2));
 
-        System.out.println("\nExercice 2");
+        System.out.println("\n\nExercice 2");
+
     }
 
 }
