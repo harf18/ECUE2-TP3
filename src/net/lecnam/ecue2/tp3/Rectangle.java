@@ -24,4 +24,12 @@ public class Rectangle {
     public void translate(double x, double y) {
         origin.translate(x, y);
     }
+
+    public boolean contain(Point ptn) {
+        double x2 = origin.x + length;
+        double y2 = origin.y + height;
+
+        return (origin.x <= ptn.x) && (origin.y <= ptn.y) &&
+                (ptn.x <= x2) && (ptn.y <= y2);
+    }
 }

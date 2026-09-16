@@ -40,9 +40,14 @@ public class Exec  {
         //Rectangle class test ===============================================================
         Rectangle rect1 = new Rectangle(ptn3, 20, 55);
         Rectangle rect2 = new Rectangle(25, 25, 10, 30);
+        Point ptn4 = new Point(30, 29);
 
         System.out.println("Surface rect1 : " + rect1.retourneSurface());
         System.out.println("Surface rect2 : " + rect2.retourneSurface());
+
+
+        System.out.println(rect2.contain(ptn4) ? "ptn4 est dans rect2" : "ptn4 n'est pas dans rect2");
+        System.out.println(rect2.contain(ptn1) ? "ptn1 est dans rect2" : "ptn1 n'est pas dans rect2");
 
 
 
