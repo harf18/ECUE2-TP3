@@ -27,5 +27,16 @@ public class Dessin {
             rect.translate(x, y);
         }
     }
+
+    public Rectangle retournePlusGrandRectangle() {
+        Rectangle plusGrandRect = new Rectangle(0, 0, 0, 0);
+        for (Rectangle rect: rectangles) {
+            if (rect.retourneSurface() > plusGrandRect.retourneSurface()) {
+                plusGrandRect = rect;
+            }
+        }
+        return plusGrandRect;
+
+    }
 }
 
