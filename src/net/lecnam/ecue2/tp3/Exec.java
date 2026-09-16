@@ -37,6 +37,10 @@ public class Exec  {
         System.out.println("ptn2 - " + ptn2);
         System.out.println("Distance : " + ptn1.retourneDistance(ptn2));
 
+        //Rectangle class test ===============================================================
+        Rectangle rect1 = new Rectangle(ptn3, 20, 55);
+        Rectangle rect2 = new Rectangle(25, 25, 10, 30);
+
 
 
     }
