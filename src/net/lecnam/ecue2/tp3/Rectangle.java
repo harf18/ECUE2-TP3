@@ -32,4 +32,20 @@ public class Rectangle {
         return (origin.x <= ptn.x) && (origin.y <= ptn.y) &&
                 (ptn.x <= x2) && (ptn.y <= y2);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if ((o == null) || getClass() != o.getClass()) return false;
+        Rectangle rect = (Rectangle) o;
+        return ((Double.compare(rect.height, height) == 0) &&
+                ((Double.compare(rect.length, length) == 0)) &&
+                (origin.equals(rect.origin)));
+    }
+
+    @Override
+    public String toString()
+    {
+        return "(origin : " + origin + ", height : " + height + ", length : " + length + ", surface : " + retourneSurface() + ')';
+    }
 }

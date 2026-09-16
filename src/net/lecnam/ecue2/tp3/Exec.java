@@ -44,10 +44,15 @@ public class Exec  {
 
         System.out.println("Surface rect1 : " + rect1.retourneSurface());
         System.out.println("Surface rect2 : " + rect2.retourneSurface());
+        System.out.println();
 
 
         System.out.println(rect2.contain(ptn4) ? "ptn4 est dans rect2" : "ptn4 n'est pas dans rect2");
         System.out.println(rect2.contain(ptn1) ? "ptn1 est dans rect2" : "ptn1 n'est pas dans rect2");
+        System.out.println();
+
+        System.out.println(rect2);
+        System.out.println();
 
 
 
