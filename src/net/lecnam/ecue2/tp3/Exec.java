@@ -41,6 +41,10 @@ public class Exec  {
         Rectangle rect1 = new Rectangle(ptn3, 20, 55);
         Rectangle rect2 = new Rectangle(25, 25, 10, 30);
 
+        System.out.println("Surface rect1 : " + rect1.retourneSurface());
+        System.out.println("Surface rect2 : " + rect2.retourneSurface());
+
+
 
 
     }

@@ -16,4 +16,12 @@ public class Rectangle {
         this.height = height;
         this.length = length;
     }
+
+    public double retourneSurface() {
+        return height * length;
+    }
+
+    public void translate(double x, double y) {
+        origin.translate(x, y);
+    }
 }
