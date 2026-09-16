@@ -13,5 +13,19 @@ public class Dessin {
         rectangles[nRectangles] = rect;
         nRectangles++;
     }
+
+    public double retourneSurface() {
+        double totalSurface = 0.0;
+        for (Rectangle rect: rectangles) {
+            totalSurface += rect.retourneSurface();
+        }
+        return totalSurface;
+    }
+
+    public void translate(double x, double y) {
+        for (Rectangle rect: rectangles) {
+            rect.translate(x, y);
+        }
+    }
 }
 
