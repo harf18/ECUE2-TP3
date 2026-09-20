@@ -6,10 +6,16 @@ public class Rectangle {
     double largeur;
     Point origine;
 
-    public Rectangle(double longueur, double largeur, Point origine) {
+    public Rectangle(Point origine, double longueur, double largeur) {
+        this.origine = origine;
         this.longueur = longueur;
         this.largeur = largeur;
-        this.origine = origine;
+    }
+
+    public Rectangle(double x, double y, double longueur, double largeur) {
+        this.origine = new Point(x, y);
+        this.longueur = longueur;
+        this.largeur = largeur;
     }
 
 }
