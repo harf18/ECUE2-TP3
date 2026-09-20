@@ -32,4 +32,16 @@ public class Rectangle {
                p.y >= origine.y && p.y <= origine.y + largeur;
     }
 
+    public boolean equals(Object obj) {
+        Rectangle rect = (Rectangle) obj;
+        return origine.equals(rect.origine) &&
+               Double.compare(longueur, rect.longueur) == 0 &&
+               Double.compare(largeur, rect.largeur) == 0;
+    }
+
+    public String toString() {
+        return "Rectangle(origine=" + origine + ", longueur=" + longueur +
+               ", largeur=" + largeur + ", surface=" + retourneSurface() + ")";
+    }
+
 }
