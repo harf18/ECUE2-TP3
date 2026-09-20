@@ -18,4 +18,13 @@ public class Rectangle {
         this.largeur = largeur;
     }
 
+    public double retourneSurface() {
+        return longueur * largeur;
+    }
+
+    public void translate(double dx, double dy) {
+        this.origine.x += dx;
+        this.origine.y += dy;
+    }
+
 }
