@@ -27,4 +27,9 @@ public class Rectangle {
         this.origine.y += dy;
     }
 
+    public boolean contient(Point p) {
+        return p.x >= origine.x && p.x <= origine.x + longueur &&
+               p.y >= origine.y && p.y <= origine.y + largeur;
+    }
+
 }
