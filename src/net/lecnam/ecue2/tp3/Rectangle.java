@@ -15,4 +15,12 @@ public class Rectangle {
         this.largeur = largeur;
         this.point = new Point(x,y);
     }
+
+    public double retourneSurface(){
+        return longueur*largeur;
+    }
+
+    public void translate(double x, double y){
+        this.point.translate(x,y);
+    }
 }
