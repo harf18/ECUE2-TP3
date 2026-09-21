@@ -14,4 +14,18 @@ public class Dessin {
         nbRectangles += 1;
     }
 
+    public double retourneSurface() {
+        double surface = 0;
+        for (int i = 0; i>=nbRectangles; i++){
+            surface += rectangles[i].longueur * rectangles[i].largeur;
+        }
+        return surface;
+    }
+
+    public void translate(double x, double y){
+        for (int i = 0; i>=nbRectangles; i++){
+            this.rectangles[i].translate(x,y);
+        }
+    }
+
 }
