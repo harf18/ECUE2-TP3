@@ -9,4 +9,8 @@ public class Dessin {
         this.nbRectangles = 0;
     }
 
+    public void ajout(Rectangle r){
+        rectangles[nbRectangles] = r;
+    }
+
 }
