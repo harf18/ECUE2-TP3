@@ -11,6 +11,7 @@ public class Dessin {
 
     public void ajout(Rectangle r){
         rectangles[nbRectangles] = r;
+        nbRectangles += 1;
     }
 
 }
