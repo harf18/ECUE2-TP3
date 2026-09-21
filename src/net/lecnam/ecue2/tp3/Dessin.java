@@ -23,9 +23,18 @@ public class Dessin {
     }
 
     public void translate(double x, double y){
-        for (int i = 0; i>=nbRectangles; i++){
+        for (int i = 0; i<nbRectangles; i++){
             this.rectangles[i].translate(x,y);
         }
     }
 
+    public Rectangle retournePlusGrandRectangle(){
+        Rectangle plusGrandRectangle = rectangles[0];
+        for (int i = 0; i<nbRectangles; i++){
+            if (rectangles[i].retourneSurface() >= plusGrandRectangle.retourneSurface()) {
+                plusGrandRectangle = rectangles[i];
+            }
+        }
+        return plusGrandRectangle;
+    }
 }
