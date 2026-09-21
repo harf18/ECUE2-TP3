@@ -33,6 +33,17 @@ public class Rectangle {
                 (ptn.x <= x2) && (ptn.y <= y2);
     }
 
+    public boolean contain(Carre square) {
+        double x2 = origin.x + length;
+        double y2 = origin.y + height;
+
+        double x2Square = square.origin.x + square.side;
+        double y2Square = square.origin.y + square.side;
+
+        return (origin.x <= square.origin.x) && (origin.y <= square.origin.y) &&
+                (x2Square <= x2) && (y2Square <= y2);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

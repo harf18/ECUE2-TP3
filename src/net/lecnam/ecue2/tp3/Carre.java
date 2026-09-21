@@ -30,6 +30,17 @@ public class Carre {
                 (ptn.x <= x2) && (ptn.y <= y2);
     }
 
+    public boolean contain(Rectangle rect) {
+        double x2 = origin.x + side;
+        double y2 = origin.y + side;
+
+        double x2Square = rect.origin.x + rect.length;
+        double y2Square = rect.origin.y + rect.height;
+
+        return (origin.x <= rect.origin.x) && (origin.y <= rect.origin.y) &&
+                (x2Square <= x2) && (y2Square <= y2);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
