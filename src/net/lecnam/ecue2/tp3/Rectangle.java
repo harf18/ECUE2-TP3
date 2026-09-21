@@ -25,8 +25,20 @@ public class Rectangle {
     }
 
     public boolean contient(Point point) {
-        return (point.x >= this.point.x && point.x <= this.longueur) && (point.y >= this.point.y && point.y <= this.largeur);
+        return (point.x >= this.point.x && point.x <= (this.longueur+this.point.x)) && (point.y >= this.point.y && point.y <= (this.largeur+this.point.y));
     }
 
-    
+    @Override
+    public boolean equals(Object r){
+        if (this == r) return true;
+        if (r == null || getClass() != r.getClass()) return false;
+        Rectangle rectangle = (Rectangle) r;
+        return rectangle.point.equals(this.point) && Double.compare(rectangle.largeur, this.largeur) == 0 && Double.compare(rectangle.longueur, this.longueur) == 0;
+    }
+
+    @Override
+    public String toString(){
+        return "Point d'origine : " + point.toString() + "; longueur = " + longueur + "; largeur = " + largeur + ", Surface = " + this.retourneSurface();
+    }
+
 }
