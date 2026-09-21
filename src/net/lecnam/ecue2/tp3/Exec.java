@@ -54,6 +54,24 @@ public class Exec  {
         System.out.println(rect2);
         System.out.println();
 
+        //TP3
+
+        Dessin dessin = new Dessin();
+
+        dessin.ajout(new Rectangle(20, 12, 50, 25));
+        dessin.ajout(rect2);
+        dessin.ajout(new Rectangle(2, 1,5, 300));
+
+        System.out.println("Totale surface : " + dessin.retourneSurface());
+        System.out.println("info triangle : " + dessin.retournePlusGrandRectangle().toString());
+
+        dessin.translate(666,999);
+
+        System.out.println("info triangle : " + dessin.retournePlusGrandRectangle().toString());
+
+
+
+
 
 
 
