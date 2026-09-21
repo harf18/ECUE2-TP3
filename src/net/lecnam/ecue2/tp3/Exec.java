@@ -29,6 +29,26 @@ public class Exec  {
         System.out.println("r1 contient p2 : " + r1.contient(p2));
         System.out.println("Test du equal : " + r1.equals(r2));
         System.out.println("Test du toString : " + r2.toString());
-    }
 
+        System.out.println("\nExercice Dessin");
+
+        Rectangle r3 = new Rectangle(p1, 5, 4);
+        Rectangle r4 = new Rectangle(p2, 10, 5);
+        Rectangle r5 = new Rectangle(p3, 3, 2);
+
+        Dessin rectangles =new Dessin();
+
+        rectangles.ajout(r1);
+        rectangles.ajout(r2);
+        rectangles.ajout(r3);
+        rectangles.ajout(r4);
+        rectangles.ajout(r5);
+
+        System.out.println("Surface totales des rectangles : " + rectangles.retourneSurface());
+        Rectangle plusGrandRectangle = rectangles.retournePlusGrandRectangle();
+
+        System.out.println("Information du plus grand rectangle : " + plusGrandRectangle.toString());
+
+        rectangles.translate(2,1);
+    }
 }

@@ -16,7 +16,7 @@ public class Dessin {
 
     public double retourneSurface() {
         double surface = 0;
-        for (int i = 0; i>=nbRectangles; i++){
+        for (int i = 0; i<nbRectangles; i++){
             surface += rectangles[i].longueur * rectangles[i].largeur;
         }
         return surface;
@@ -30,6 +30,9 @@ public class Dessin {
 
     public Rectangle retournePlusGrandRectangle(){
         Rectangle plusGrandRectangle = rectangles[0];
+        if (nbRectangles == 0) {
+            return null;
+        }
         for (int i = 0; i<nbRectangles; i++){
             if (rectangles[i].retourneSurface() >= plusGrandRectangle.retourneSurface()) {
                 plusGrandRectangle = rectangles[i];
