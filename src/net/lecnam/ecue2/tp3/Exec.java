@@ -6,6 +6,74 @@ import java.time.format.DateTimeFormatter;
 public class Exec  {
 
     public static void main(String[] args) {
+        Point ptn1 = new Point(12.5, 64.85);
+        Point ptn2 = new Point(10, 20);
+        Point ptn3 = new Point(10, 20);
+
+
+        System.out.println("Ptn1 de base.");
+        System.out.println(ptn1 + "\n");
+
+
+        ptn1.translate(12.45, 33.33);
+        System.out.println("Ptn1 après méthode translate");
+        System.out.println(ptn1);
+
+        System.out.println("Compare ptn2 et ptn3");
+        System.out.println("ptn2 - " + ptn2);
+        System.out.println("ptn3 - " + ptn3);
+        System.out.println(ptn2.equals(ptn3) ? "ptn2 et ptn3 sont identitque" : "ptn2 et ptn3 sont différent");
+        System.out.println();
+
+        System.out.println("compare Ptn2 après méthode translate");
+        ptn2.translate(12.45, 25);
+        System.out.println("ptn2 - " + ptn2);
+        System.out.println("ptn3 - " + ptn3);
+        System.out.println(ptn2.equals(ptn3) ? "ptn2 et ptn3 sont identitque" : "ptn2 et ptn3 sont différent");
+        System.out.println();
+
+        System.out.println("Distance entre ptn1 et ptn2");
+        System.out.println("ptn1 - " + ptn1);
+        System.out.println("ptn2 - " + ptn2);
+        System.out.println("Distance : " + ptn1.retourneDistance(ptn2));
+
+        //Rectangle class test ===============================================================
+        Rectangle rect1 = new Rectangle(ptn3, 20, 55);
+        Rectangle rect2 = new Rectangle(25, 25, 10, 30);
+        Point ptn4 = new Point(30, 29);
+
+        System.out.println("Surface rect1 : " + rect1.retourneSurface());
+        System.out.println("Surface rect2 : " + rect2.retourneSurface());
+        System.out.println();
+
+
+        System.out.println(rect2.contain(ptn4) ? "ptn4 est dans rect2" : "ptn4 n'est pas dans rect2");
+        System.out.println(rect2.contain(ptn1) ? "ptn1 est dans rect2" : "ptn1 n'est pas dans rect2");
+        System.out.println();
+
+        System.out.println(rect2);
+        System.out.println();
+
+        //TP3
+
+        Dessin dessin = new Dessin();
+
+        dessin.ajout(new Rectangle(20, 12, 50, 25));
+        dessin.ajout(rect2);
+        dessin.ajout(new Rectangle(2, 1,5, 300));
+
+        System.out.println("Totale surface : " + dessin.retourneSurface());
+        System.out.println("info triangle : " + dessin.retournePlusGrandRectangle().toString());
+
+        dessin.translate(666,999);
+
+        System.out.println("info triangle : " + dessin.retournePlusGrandRectangle().toString());
+
+
+
+
+
+
 
     }
 
